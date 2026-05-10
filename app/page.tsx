@@ -1,38 +1,21 @@
-import type { Metadata } from "next";
-import { Syne, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
-const syne = Syne({
-  subsets: ["latin"],
-  variable: "--font-syne",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-});
-
-export const metadata: Metadata = {
-  title: "Ahmad Rizal · Full Stack Developer",
-  description:
-    "Full Stack Developer specialising in Next.js, TypeScript, and Node.js. Based in Kuala Lumpur.",
-  openGraph: {
-    title: "Ahmad Rizal · Full Stack Developer",
-    description: "Full Stack Developer based in Kuala Lumpur.",
-    type: "website",
-  },
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Home() {
   return (
-    <html lang="en" className={`${syne.variable} ${jetbrainsMono.variable}`}>
-      <body>{children}</body>
-    </html>
+    <main className="bg-zinc-950 min-h-screen">
+      <Navbar />
+      <Hero />
+      <Projects />
+      <Skills />
+      <Experience />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
