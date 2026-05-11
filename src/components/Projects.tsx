@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { projects, type ProjectCategory } from "@/lib/data";
+import { personal, projects, type ProjectCategory } from "@/lib/data";
 
 const filters: { label: string; value: ProjectCategory }[] = [
   { label: "All", value: "all" },
@@ -121,7 +121,7 @@ export default function Projects() {
         {/* GitHub CTA */}
         <div className="mt-14 text-center">
           <a
-            href="https://github.com"
+            href={personal.github}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-zinc-800 px-6 py-3 font-mono text-sm text-zinc-500 transition-all hover:border-zinc-600 hover:text-white"

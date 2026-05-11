@@ -12,43 +12,45 @@ export const personal = {
 };
 
 export const stats = [
-  { value: "5+", label: "Years exp" },
-  { value: "32+", label: "Projects shipped" },
-  { value: "12k", label: "GitHub stars" },
-  { value: "99%", label: "Client rating" },
+  { value: "TRUE", label: "Internship completed" },
+  { value: "2+", label: "Years of Coding Experience" },
+  { value: "Computer Science", label: "Bachelor Degree" },
 ];
 
 export const techStack = [
   "Next.js",
-  "TypeScript",
   "Node.js",
+  "TypeScript",
   "PostgreSQL",
-  "Docker",
+  "Express",
+  "Flask/FastAPI",
+  "Tailwind CSS",
   "AWS",
 ];
 
 export const skills = {
   Frontend: [
-    { name: "Next.js / React", pct: 95 },
-    { name: "TypeScript", pct: 90 },
-    { name: "Tailwind CSS", pct: 92 },
-    { name: "Animation / Motion", pct: 80 },
+    { name: "Next.js / React", pct: 80 },
+    { name: "TypeScript", pct: 70 },
+    { name: "Tailwind CSS", pct: 65 },
+    { name: "Animation / Motion", pct: 50 },
     { name: "Testing (Vitest)", pct: 75 },
   ],
   Backend: [
     { name: "Node.js / Express", pct: 90 },
-    { name: "PostgreSQL", pct: 85 },
-    { name: "GraphQL", pct: 78 },
-    { name: "Redis", pct: 72 },
-    { name: "Prisma / ORM", pct: 82 },
+    { name: "PostgreSQL", pct: 80 },
+    { name: "MongoDB - NoSQL", pct: 70 },
+    { name: " REST", pct: 80 },
+    { name: "Flask / FastAPI", pct: 60 },
+    { name: "WebSocket / Real-time", pct: 85 },
   ],
-  DevOps: [
-    { name: "Docker / Compose", pct: 80 },
-    { name: "AWS (EC2/S3/CF)", pct: 74 },
-    { name: "CI/CD (GitHub Actions)", pct: 85 },
-    { name: "Vercel / Edge", pct: 90 },
-    { name: "Linux / Nginx", pct: 70 },
-  ],
+  Game: [
+    { name: "CocosCreator", pct: 80 },
+    { name: "Roblox Studio", pct: 85 },
+    { name: "Tiled Map Editor", pct: 70 },
+    { name: "Luau", pct: 75 },
+  ]
+
 };
 
 export type ProjectCategory = "all" | "fullstack" | "frontend" | "api";
