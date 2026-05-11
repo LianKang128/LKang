@@ -1,11 +1,11 @@
 export const personal = {
-  name: "Ahmad Rizal",
+  name: "Lian Kang",
   role: "Full Stack Developer",
   tagline:
     "I craft high-performance web apps with clean architecture and obsessive attention to detail. From API to pixel.",
   location: "Kuala Lumpur, Malaysia",
   available: true,
-  email: "ahmad@example.com",
+  email: "leeliankang1@example.com",
   github: "https://github.com",
   linkedin: "https://linkedin.com",
   twitter: "https://twitter.com",
