@@ -52,7 +52,7 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="relative min-h-screen bg-zinc-950 flex flex-col justify-center overflow-hidden"
+      className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-zinc-950"
     >
       {/* Animated dot grid background */}
       <canvas
@@ -63,55 +63,56 @@ export default function Hero() {
       {/* Red glow blob */}
       <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-red-900/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-16 w-full">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative mx-auto flex min-h-screen w-full max-w-[1800px] items-center px-6 pb-16 pt-24 sm:px-10 lg:px-16 xl:px-24">
+        <div className="grid w-full items-center gap-12 md:grid-cols-[1.15fr_0.85fr] lg:gap-20 xl:gap-28">
 
           {/* LEFT — identity */}
           <div>
             {/* Status pill */}
-            <div className="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-800 rounded-full px-3 py-1.5 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-xs text-zinc-400 font-mono">
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900 px-4 py-2 lg:mb-10">
+              <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="font-mono text-xs text-zinc-400 lg:text-sm">
                 {personal.available ? "Available for work" : "Not available"} · {personal.location}
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[0.95] tracking-tighter mb-4">
+            <h1 className="mb-5 text-6xl font-black leading-[0.9] tracking-tighter text-white sm:text-7xl md:text-8xl xl:text-9xl 2xl:text-[10rem]">
               {personal.name.split(" ")[0]}
               <br />
               <span className="text-red-700">{personal.name.split(" ")[1]}</span>
             </h1>
 
-            <p className="font-mono text-zinc-500 text-sm mb-6 tracking-wide">
-              // {personal.role}
+            <p className="mb-8 font-mono text-base tracking-wide text-zinc-500 lg:text-lg">
+              {"// "}
+              {personal.role}
             </p>
 
-            <p className="text-zinc-400 text-sm leading-relaxed max-w-sm mb-8">
+            <p className="mb-10 max-w-2xl text-base leading-relaxed text-zinc-400 lg:text-lg">
               {personal.tagline}
             </p>
 
             {/* Tech stack pills */}
-            <div className="flex flex-wrap gap-2 mb-10">
+            <div className="mb-12 flex max-w-2xl flex-wrap gap-3">
               {techStack.map((t) => (
                 <span
                   key={t}
-                  className="text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-500 px-2.5 py-1 rounded-md hover:border-red-800/50 hover:text-zinc-300 transition-colors"
+                  className="rounded-md border border-zinc-800 bg-zinc-900 px-3 py-1.5 font-mono text-xs text-zinc-500 transition-colors hover:border-red-800/50 hover:text-zinc-300 lg:text-sm"
                 >
                   {t}
                 </span>
               ))}
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-4">
               <a
                 href="#work"
-                className="bg-red-800 hover:bg-red-700 text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors"
+                className="rounded-full bg-red-800 px-7 py-4 text-base font-semibold text-white transition-colors hover:bg-red-700"
               >
                 View projects
               </a>
               <a
                 href="/resume.pdf"
-                className="border border-zinc-700 hover:border-zinc-500 text-zinc-400 hover:text-white text-sm px-6 py-3 rounded-full transition-colors"
+                className="rounded-full border border-zinc-700 px-7 py-4 text-base text-zinc-400 transition-colors hover:border-zinc-500 hover:text-white"
               >
                 Download CV
               </a>
@@ -119,17 +120,17 @@ export default function Hero() {
           </div>
 
           {/* RIGHT — stats */}
-          <div className="flex flex-col gap-5">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="flex flex-col gap-5 lg:gap-6">
+            <div className="grid grid-cols-2 gap-4 lg:gap-6">
               {stats.map((s) => (
                 <div
                   key={s.label}
-                  className="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-5 backdrop-blur-sm"
+                  className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 backdrop-blur-sm xl:p-8"
                 >
-                  <p className="text-3xl font-black text-white tracking-tighter">
+                  <p className="text-4xl font-black tracking-tighter text-white xl:text-5xl">
                     {s.value}
                   </p>
-                  <p className="text-xs text-zinc-600 mt-1 uppercase tracking-widest font-mono">
+                  <p className="mt-2 font-mono text-xs uppercase tracking-widest text-zinc-600 lg:text-sm">
                     {s.label}
                   </p>
                 </div>
@@ -137,15 +138,15 @@ export default function Hero() {
             </div>
 
             {/* Profile photo placeholder */}
-            <div className="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-5 backdrop-blur-sm flex items-center gap-4">
-              <div className="w-16 h-16 rounded-xl bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-500 text-xs shrink-0">
+            <div className="flex items-center gap-5 rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 backdrop-blur-sm xl:p-8">
+              <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-xl border border-zinc-700 bg-zinc-800 text-xs text-zinc-500">
                 {/* Replace with: <Image src="/profile.jpg" alt="..." width={64} height={64} className="rounded-xl object-cover" /> */}
                 Photo
               </div>
               <div>
-                <p className="text-white font-semibold text-sm">{personal.name}</p>
-                <p className="text-zinc-500 text-xs mt-0.5">{personal.role}</p>
-                <p className="text-zinc-600 text-xs mt-2 font-mono">{personal.email}</p>
+                <p className="text-base font-semibold text-white">{personal.name}</p>
+                <p className="mt-1 text-sm text-zinc-500">{personal.role}</p>
+                <p className="mt-3 font-mono text-sm text-zinc-600">{personal.email}</p>
               </div>
             </div>
           </div>

@@ -23,9 +23,9 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+      <div className="mx-auto flex h-16 w-full max-w-[1800px] items-center justify-between px-6 sm:px-10 lg:px-16">
         {/* Logo */}
-        <a href="#" className="font-bold text-white text-sm tracking-tight">
+        <a href="#" className="text-base font-bold tracking-tight text-white">
           {personal.name.split(" ")[0]}
           <span className="text-red-700">
             {personal.name.split(" ")[1]?.[0]}
@@ -34,12 +34,12 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden items-center gap-10 md:flex">
           {links.map((l) => (
             <a
               key={l}
               href={`#${l.toLowerCase()}`}
-              className="text-xs text-zinc-500 hover:text-white transition-colors tracking-wide"
+              className="text-sm tracking-wide text-zinc-500 transition-colors hover:text-white"
             >
               {l.toLowerCase()}
             </a>
@@ -49,7 +49,7 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href={`mailto:${personal.email}`}
-          className="hidden md:flex items-center gap-2 bg-red-800 hover:bg-red-700 text-white text-xs font-semibold px-4 py-2 rounded-full transition-colors"
+          className="hidden items-center gap-2 rounded-full bg-red-800 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-red-700 md:flex"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
           Let&apos;s talk
