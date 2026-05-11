@@ -51,7 +51,7 @@ export default function Hero() {
 
   return (
     <section
-      id="about"
+      id="home"
       className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-zinc-950"
     >
       {/* Animated dot grid background */}
@@ -63,7 +63,7 @@ export default function Hero() {
       {/* Red glow blob */}
       <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-red-900/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative mx-auto flex min-h-screen w-full max-w-[1800px] items-center px-6 pb-16 pt-24 sm:px-10 lg:px-16 xl:px-24">
+      <div className="relative mx-auto flex min-h-screen w-full max-w-[1800px] items-center px-6 pb-16 pt-32 sm:px-10 lg:px-16 lg:pt-40 xl:px-24 xl:pt-44">
         <div className="grid w-full items-center gap-12 md:grid-cols-[1.15fr_0.85fr] lg:gap-20 xl:gap-28">
 
           {/* LEFT — identity */}
