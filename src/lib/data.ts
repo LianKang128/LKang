@@ -6,9 +6,9 @@ export const personal = {
   location: "Kuala Lumpur, Malaysia",
   available: true,
   email: "leeliankang1@example.com",
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  twitter: "https://twitter.com",
+  github: "https://github.com/LianKang128",
+  linkedin: "https://www.linkedin.com/in/lee-lian-kang-4b45392a0/",
+  whatsapp: "https://wa.me/1137004780",
 };
 
 export const stats = [

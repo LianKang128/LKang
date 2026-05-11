@@ -32,7 +32,7 @@ export default function Contact() {
             {[
               { label: "GitHub", href: personal.github },
               { label: "LinkedIn", href: personal.linkedin },
-              { label: "Twitter", href: personal.twitter },
+              { label: "WhatsApp", href: personal.whatsapp },
             ].map((s) => (
               <a
                 key={s.label}
