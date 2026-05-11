@@ -12,9 +12,29 @@ export const personal = {
 };
 
 export const stats = [
-  { value: "TRUE", label: "Internship completed" },
-  { value: "2+", label: "Years of Coding Experience" },
-  { value: "Computer Science", label: "Bachelor Degree" },
+  {
+    value: "TRUE",
+    label: "Internship completed",
+    tone: "success",
+    toneStyle: "full",
+    color: {},
+  },
+  {
+    value: "2+",
+    label: "Years of Coding Experience",
+    tone: "neutral",
+    toneStyle: "value",
+    color: {
+      value: "text-sky-300 drop-shadow-[0_0_12px_#7dd3fccc]",
+    },
+  },
+  {
+    value: "Computer Science",
+    label: "Bachelor Degree",
+    tone: "neutral",
+    toneStyle: "full",
+    color: {},
+  },
 ];
 
 export const techStack = [
@@ -52,6 +72,15 @@ export const skills = {
   ]
 
 };
+
+export const howIWork = [
+  { icon: "⚡", label: "Performance-first", sub: "Every ms counts" },
+  { icon: "♿", label: "Accessibility", sub: "WCAG 2.1 AA standard" },
+  { icon: "🔒", label: "Security", sub: "OWASP top 10 aware" },
+  { icon: "🧪", label: "Test coverage", sub: "Unit + E2E always" },
+];
+
+export const currentlyLearning = ["Rust", "LLM APIs", "Edge Runtime", "WebGPU"];
 
 export type ProjectCategory = "all" | "fullstack" | "frontend" | "api";
 

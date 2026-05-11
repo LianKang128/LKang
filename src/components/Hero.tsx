@@ -3,6 +3,24 @@
 import { useEffect, useRef } from "react";
 import { personal, stats, techStack } from "@/lib/data";
 
+const statToneStyles = {
+  success: {
+    card: "border-emerald-400/40 bg-emerald-950/20 shadow-[0_0_32px_#10b9812e]",
+    value: "text-emerald-300 drop-shadow-[0_0_12px_#34d399bf]",
+    label: "text-emerald-500/70",
+  },
+  danger: {
+    card: "border-red-500/40 bg-red-950/20 shadow-[0_0_32px_#ef444429]",
+    value: "text-red-400 drop-shadow-[0_0_12px_#f87171b3]",
+    label: "text-red-500/70",
+  },
+  neutral: {
+    card: "border-zinc-800 bg-zinc-900/60",
+    value: "text-white",
+    label: "text-zinc-600",
+  },
+};
+
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -122,19 +140,28 @@ export default function Hero() {
           {/* RIGHT — stats */}
           <div className="flex flex-col gap-5 lg:gap-6">
             <div className="grid grid-cols-2 gap-4 lg:gap-6">
-              {stats.map((s) => (
+              {stats.map((s) => {
+                const tone = statToneStyles[s.tone as keyof typeof statToneStyles] ?? statToneStyles.neutral;
+                const cardTone = s.toneStyle === "value" ? statToneStyles.neutral : tone;
+                const labelTone = s.toneStyle === "value" ? statToneStyles.neutral : tone;
+                const cardClass = s.color?.card ?? cardTone.card;
+                const valueClass = s.color?.value ?? tone.value;
+                const labelClass = s.color?.label ?? labelTone.label;
+
+                return (
                 <div
                   key={s.label}
-                  className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 backdrop-blur-sm xl:p-8"
+                  className={`rounded-2xl border p-6 backdrop-blur-sm transition-all xl:p-8 ${cardClass}`}
                 >
-                  <p className="text-4xl font-black tracking-tighter text-white xl:text-5xl">
+                  <p className={`text-4xl font-black tracking-tighter xl:text-5xl ${valueClass}`}>
                     {s.value}
                   </p>
-                  <p className="mt-2 font-mono text-xs uppercase tracking-widest text-zinc-600 lg:text-sm">
+                  <p className={`mt-2 font-mono text-xs uppercase tracking-widest lg:text-sm ${labelClass}`}>
                     {s.label}
                   </p>
                 </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Profile photo placeholder */}
