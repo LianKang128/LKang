@@ -1,7 +1,8 @@
 export const personal = {
   name: "Ahmad Rizal",
   role: "Full Stack Developer",
-  tagline: "I craft high-performance web apps with clean architecture and obsessive attention to detail. From API to pixel.",
+  tagline:
+    "I craft high-performance web apps with clean architecture and obsessive attention to detail. From API to pixel.",
   location: "Kuala Lumpur, Malaysia",
   available: true,
   email: "ahmad@example.com",
@@ -18,7 +19,12 @@ export const stats = [
 ];
 
 export const techStack = [
-  "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Docker", "AWS",
+  "Next.js",
+  "TypeScript",
+  "Node.js",
+  "PostgreSQL",
+  "Docker",
+  "AWS",
 ];
 
 export const skills = {
@@ -115,32 +121,72 @@ export const experience = [
     id: 1,
     role: "Senior Frontend Developer",
     company: "Tech Corp",
-    period: "2023 – Present",
+    period: "2023 - Present",
     current: true,
+    location: "Kuala Lumpur, Malaysia - Hybrid",
     desc: "Leading frontend architecture for a B2B SaaS platform with 200k+ users. Migrated monolith to micro-frontends, cutting build times by 60%.",
+    detail:
+      "Owned the frontend platform for a large SaaS product, shaping component architecture, performance budgets, release workflows, and developer experience across multiple teams.",
+    skillsUsed: ["Next.js", "React", "TypeScript", "Tailwind", "Testing"],
+    learned: ["Micro-frontends", "Design systems", "Frontend performance"],
+    highlights: [
+      "Reduced build times by 60% through modular architecture.",
+      "Improved UI consistency with a reusable component system.",
+      "Mentored developers on scalable React patterns.",
+    ],
   },
   {
     id: 2,
     role: "Full Stack Developer",
     company: "Startup XYZ",
-    period: "2021 – 2023",
+    period: "2021 - 2023",
     current: false,
+    location: "Remote - Southeast Asia",
     desc: "Built the core product from zero to Series A. Designed a data pipeline handling 5M events/day with sub-100ms query latency.",
+    detail:
+      "Worked across product, API, database, and deployment layers while the company moved from prototype to production. Focused on reliable backend systems and fast iteration.",
+    skillsUsed: ["Node.js", "PostgreSQL", "Redis", "GraphQL", "Docker"],
+    learned: ["Product discovery", "Data pipelines", "Cloud deployment"],
+    highlights: [
+      "Built core product flows used by early enterprise customers.",
+      "Designed event ingestion for millions of daily records.",
+      "Helped stabilize production releases during rapid growth.",
+    ],
   },
   {
     id: 3,
     role: "Frontend Developer",
     company: "Agency ABC",
-    period: "2019 – 2021",
+    period: "2019 - 2021",
     current: false,
+    location: "Petaling Jaya, Malaysia - On-site",
     desc: "Delivered 15+ client projects. Introduced a shared component system that cut delivery time by 30% across all projects.",
+    detail:
+      "Built polished web experiences for clients across different industries, translating design files into responsive interfaces with clean handoff and maintainable styling.",
+    skillsUsed: ["React", "JavaScript", "CSS", "Storybook", "Figma"],
+    learned: ["Client communication", "Responsive UI", "Reusable components"],
+    highlights: [
+      "Delivered more than 15 production websites and apps.",
+      "Created shared UI patterns for faster project delivery.",
+      "Worked closely with designers to improve implementation quality.",
+    ],
   },
   {
     id: 4,
     role: "Junior Developer",
     company: "Freelance",
-    period: "2018 – 2019",
+    period: "2018 - 2019",
     current: false,
+    location: "Kuala Lumpur, Malaysia - Freelance",
     desc: "Built landing pages and small web apps for local businesses. Focused on clean semantic HTML, CSS, and vanilla JS.",
+    detail:
+      "Started by helping small businesses get online with fast landing pages, simple dashboards, and practical tools while building a strong foundation in web fundamentals.",
+    skillsUsed: ["HTML", "CSS", "JavaScript", "WordPress", "SEO"],
+    learned: ["Web fundamentals", "Freelance workflow", "Client support"],
+    highlights: [
+      "Built responsive landing pages for local businesses.",
+      "Improved basic SEO and page speed for client sites.",
+      "Learned to scope, deliver, and maintain small projects independently.",
+    ],
   },
 ];
