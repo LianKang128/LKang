@@ -5,13 +5,29 @@ export const personal = {
     "I craft high-performance web apps with clean architecture and obsessive attention to detail. From API to pixel.",
   location: "Kuala Lumpur, Malaysia",
   available: true,
-  email: "leeliankang1@example.com",
+  email: "leeliankang1@gmail.com",
   github: "https://github.com/LianKang128",
   linkedin: "https://www.linkedin.com/in/lee-lian-kang-4b45392a0/",
   whatsapp: "https://wa.me/1137004780",
 };
 
-export const stats = [
+type StatTone = "success" | "danger" | "neutral";
+
+type StatColor = {
+  card?: string;
+  value?: string;
+  label?: string;
+};
+
+type Stat = {
+  value: string;
+  label: string;
+  tone: StatTone;
+  toneStyle: "full" | "value";
+  color?: StatColor;
+};
+
+export const stats: Stat[] = [
   {
     value: "TRUE",
     label: "Internship completed",
@@ -32,8 +48,10 @@ export const stats = [
     value: "Computer Science",
     label: "Bachelor Degree",
     tone: "neutral",
-    toneStyle: "full",
-    color: {},
+    toneStyle: "value",
+    color: {
+        value: "text-yellow-300 drop-shadow-[0_0_12px_#facc15cc]",
+    },
   },
 ];
 
@@ -46,6 +64,7 @@ export const techStack = [
   "Flask/FastAPI",
   "Tailwind CSS",
   "AWS",
+  "CocosCreator",
 ];
 
 export const skills = {
@@ -87,73 +106,33 @@ export type ProjectCategory = "all" | "fullstack" | "frontend" | "api";
 export const projects = [
   {
     id: 1,
-    name: "DataPulse",
-    desc: "Real-time analytics dashboard with live WebSocket feeds and custom charting engine.",
-    tags: ["Next.js", "WebSocket", "D3"],
+    name: "2D Map Random Generation",
+    desc: "🎮 Multiplayer Dungeon Crawler A real-time multiplayer dungeon crawler game built with Cocos Creator (TypeScript) and Node.js, featuring procedurally generated dungeons, party system, and WebSocket-based networking. 🌟 Features 🎯 Core Gameplay.",
+    tags: ["Cellular Automata", "WebSocket", "Node.js", "Algorithm", "Game Development"],
     category: "fullstack" as const,
-    stars: 840,
-    link: "#",
+    stars: 0,
+    link: "https://github.com/LianKang128/2DMapRandomGeneration",
     icon: "chart",
   },
   {
     id: 2,
-    name: "UIKit Pro",
-    desc: "Open-source component library. 80+ accessible components, zero dependencies.",
+    name: "Personal Portfolio Website",
+    desc: "A fast, minimal personal portfolio built with Next.js 16, TypeScript, and Tailwind CSS v4.",
     tags: ["React", "Tailwind", "Storybook"],
     category: "frontend" as const,
-    stars: 2100,
-    link: "#",
+    stars: 0,
+    link: "https://github.com/LianKang128/PersonalPorfolio",
     icon: "palette",
-  },
-  {
-    id: 3,
-    name: "FlowAPI",
-    desc: "High-throughput REST + GraphQL gateway. 50k req/s on a single node.",
-    tags: ["Node.js", "GraphQL", "Redis"],
-    category: "api" as const,
-    stars: 620,
-    link: "#",
-    icon: "api",
-  },
-  {
-    id: 4,
-    name: "Shopfast",
-    desc: "Headless e-commerce platform with Stripe payments and edge-cached storefront.",
-    tags: ["Next.js", "Stripe", "Sanity"],
-    category: "fullstack" as const,
-    stars: 310,
-    link: "#",
-    icon: "cart",
-  },
-  {
-    id: 5,
-    name: "MotionKit",
-    desc: "Animation primitives for React. Declarative, composable, 4kb gzipped.",
-    tags: ["React", "Framer Motion"],
-    category: "frontend" as const,
-    stars: 1400,
-    link: "#",
-    icon: "motion",
-  },
-  {
-    id: 6,
-    name: "AuthKit",
-    desc: "Drop-in auth service: OAuth2, MFA, JWT rotation, full audit logging.",
-    tags: ["Node.js", "OAuth2", "PostgreSQL"],
-    category: "api" as const,
-    stars: 480,
-    link: "#",
-    icon: "lock",
   },
 ];
 
 export const experience = [
   {
     id: 1,
-    role: "Senior Frontend Developer",
-    company: "Tech Corp",
-    period: "2023 - Present",
-    current: true,
+    role: "Game Developer - Intern",
+    company: "IXI Creatives Sdn Bhd",
+    period: "Dec 2024 - May 2025",
+    current: false,
     location: "Kuala Lumpur, Malaysia - Hybrid",
     desc: "Leading frontend architecture for a B2B SaaS platform with 200k+ users. Migrated monolith to micro-frontends, cutting build times by 60%.",
     detail:
@@ -168,56 +147,21 @@ export const experience = [
   },
   {
     id: 2,
-    role: "Full Stack Developer",
-    company: "Startup XYZ",
-    period: "2021 - 2023",
+    role: "Student",
+    company: "Asia Pacific University of Technology & Innovation (APU)",
+    period: "2023-2026",
     current: false,
-    location: "Remote - Southeast Asia",
-    desc: "Built the core product from zero to Series A. Designed a data pipeline handling 5M events/day with sub-100ms query latency.",
+    location: "Kuala Lumpur, Malaysia - Onsite",
+    desc: "Pursuing a Bachelor's degree in Computer Science with a focus on software development, algorithms, and data structures. Expected graduation in 2025.",
     detail:
-      "Worked across product, API, database, and deployment layers while the company moved from prototype to production. Focused on reliable backend systems and fast iteration.",
-    skillsUsed: ["Node.js", "PostgreSQL", "Redis", "GraphQL", "Docker"],
-    learned: ["Product discovery", "Data pipelines", "Cloud deployment"],
+      "Currently enrolled in a comprehensive Computer Science program, focusing on software engineering principles, algorithm design, and data structures. Actively participating in coding competitions and collaborative projects.",
+    skillsUsed: ["Python", "Java", "C++", "Data Structures", "Algorithms"],
+    learned: ["Software Engineering", "Problem Solving", "Team Collaboration"],
     highlights: [
-      "Built core product flows used by early enterprise customers.",
-      "Designed event ingestion for millions of daily records.",
-      "Helped stabilize production releases during rapid growth.",
+      "Maintained a strong academic record with a focus on computer science fundamentals.",
+      "Participated in university hackathons and coding challenges.",
+      "Collaborated on group projects to develop real-world applications.",
     ],
-  },
-  {
-    id: 3,
-    role: "Frontend Developer",
-    company: "Agency ABC",
-    period: "2019 - 2021",
-    current: false,
-    location: "Petaling Jaya, Malaysia - On-site",
-    desc: "Delivered 15+ client projects. Introduced a shared component system that cut delivery time by 30% across all projects.",
-    detail:
-      "Built polished web experiences for clients across different industries, translating design files into responsive interfaces with clean handoff and maintainable styling.",
-    skillsUsed: ["React", "JavaScript", "CSS", "Storybook", "Figma"],
-    learned: ["Client communication", "Responsive UI", "Reusable components"],
-    highlights: [
-      "Delivered more than 15 production websites and apps.",
-      "Created shared UI patterns for faster project delivery.",
-      "Worked closely with designers to improve implementation quality.",
-    ],
-  },
-  {
-    id: 4,
-    role: "Junior Developer",
-    company: "Freelance",
-    period: "2018 - 2019",
-    current: false,
-    location: "Kuala Lumpur, Malaysia - Freelance",
-    desc: "Built landing pages and small web apps for local businesses. Focused on clean semantic HTML, CSS, and vanilla JS.",
-    detail:
-      "Started by helping small businesses get online with fast landing pages, simple dashboards, and practical tools while building a strong foundation in web fundamentals.",
-    skillsUsed: ["HTML", "CSS", "JavaScript", "WordPress", "SEO"],
-    learned: ["Web fundamentals", "Freelance workflow", "Client support"],
-    highlights: [
-      "Built responsive landing pages for local businesses.",
-      "Improved basic SEO and page speed for client sites.",
-      "Learned to scope, deliver, and maintain small projects independently.",
-    ],
-  },
+
+  }
 ];
