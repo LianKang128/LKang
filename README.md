@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lian Kang · Personal Portfolio
+
+A fast, minimal personal portfolio built with **Next.js 16**, **TypeScript**, and **Tailwind CSS v4**.
+
+## Tech Stack
+
+- **Framework** — Next.js 16 (App Router)
+- **Language** — TypeScript
+- **Styling** — Tailwind CSS v4 with custom design tokens
+- **Fonts** — Syne (display) + JetBrains Mono (code/labels) via `next/font`
+- **Animations** — CSS transitions + canvas-based dot grid in Hero
+
+## Features
+
+- Animated hero section with canvas dot grid background
+- Project gallery with category filters (All / Full Stack / Frontend / API)
+- Animated skill bars with intersection observer (triggers on scroll into view)
+- Interactive experience timeline — click a role to expand details
+- Contact section with direct email and social links
+- Responsive navbar with active section highlight and smooth scroll
+- Custom scrollbar, selection colour, and scroll-fade animations
+- Fully responsive from mobile to ultrawide (up to `max-w-[1800px]`)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── layout.tsx       # Root layout, font setup, metadata
+│   ├── page.tsx         # Page composition
+│   └── globals.css      # Base styles, scrollbar, animations
+├── components/
+│   ├── Navbar.tsx       # Fixed nav with scroll-aware active state
+│   ├── Hero.tsx         # Canvas animation, stats cards, CTA
+│   ├── Projects.tsx     # Filterable project grid
+│   ├── Skills.tsx       # Tabbed skill bars with scroll reveal
+│   ├── Experience.tsx   # Interactive timeline
+│   ├── Contact.tsx      # Email CTA + social links
+│   └── Footer.tsx       # Copyright + status indicator
+└── lib/
+    └── data.ts          # All content — edit this to personalise
+```
 
-## Learn More
+## Personalising
 
-To learn more about Next.js, take a look at the following resources:
+All content lives in **`src/lib/data.ts`**. Update the following exports:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Export | What it controls |
+|---|---|
+| `personal` | Name, role, tagline, location, email, social links |
+| `stats` | The three stat cards in the hero |
+| `techStack` | Pill badges shown in the hero |
+| `skills` | Skill bars per category |
+| `projects` | Project cards (name, desc, tags, links, stars) |
+| `experience` | Timeline entries with highlights and skills |
+| `howIWork` | The "How I work" sidebar in Skills |
+| `currentlyLearning` | Tags in the Skills sidebar |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To add a profile photo, replace the placeholder `<div>` in `Hero.tsx` with a `next/image` pointing to `/public/profile.jpg`.
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy instantly on [Vercel](https://vercel.com):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx vercel
+```
+
+Or build for any Node host:
+
+```bash
+npm run build
+npm start
+```
+
+## License
+
+MIT — feel free to use this as a base for your own portfolio.
