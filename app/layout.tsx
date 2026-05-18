@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ahmad Rizal · Full Stack Developer",
+  title: "Lee Lian Kang · Full Stack Developer",
   description: "Full Stack Developer based in Kuala Lumpur.",
 };
 
