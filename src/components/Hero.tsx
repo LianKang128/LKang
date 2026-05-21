@@ -123,7 +123,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="#work"
+                href="/Profile.pdf"
                 className="rounded-full bg-red-800 px-7 py-4 text-base font-semibold text-white transition-colors hover:bg-red-700"
               >
                 View projects
