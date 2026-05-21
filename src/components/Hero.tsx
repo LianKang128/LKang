@@ -169,7 +169,6 @@ export default function Hero() {
             <div className="flex items-center gap-5 rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 backdrop-blur-sm xl:p-8">
               <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-xl border border-zinc-700 bg-zinc-800 text-xs text-zinc-500">
                 <Image src="/Profile.jpg" alt="..." width={64} height={64} className="rounded-xl object-cover" />
-                Photo
               </div>
               <div>
                 <p className="text-base font-semibold text-white">{personal.name}</p>
