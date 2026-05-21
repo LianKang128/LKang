@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { personal, stats, techStack } from "@/lib/data";
+import Image from "next/image";
 
 const statToneStyles = {
   success: {
@@ -167,7 +168,7 @@ export default function Hero() {
             {/* Profile photo placeholder */}
             <div className="flex items-center gap-5 rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 backdrop-blur-sm xl:p-8">
               <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-xl border border-zinc-700 bg-zinc-800 text-xs text-zinc-500">
-                {/* Replace with: <Image src="/profile.jpg" alt="..." width={64} height={64} className="rounded-xl object-cover" /> */}
+                <Image src="/Profile.jpg" alt="..." width={64} height={64} className="rounded-xl object-cover" />
                 Photo
               </div>
               <div>
